@@ -1,4 +1,4 @@
-from art import logo
+import art
 import random
 
 EASY_LEVEL = 10
@@ -13,10 +13,10 @@ def compare(user_guess, random_num, turn):
       return turn - 1
   elif user_guess < random_num:
       print("Too low.")
-      return turn - 1
-      
+      return turn - 1  
   else:
-    print(f"You got it! The answer was {random_num}!")  
+    print(f"You got it! The answer was {random_num}!") 
+    print(art.win_logo) 
 
 #function to set difficulty
 def game_mode():
@@ -28,7 +28,7 @@ def game_mode():
 
 def game():
   #title main screen
-  print(logo)
+  print(art.logo)
   print("Welcome to the number guessing game!\n")
   print("I am thinking of a number between 1 and 100.\n")
 
@@ -50,9 +50,11 @@ def game():
     turn = compare(user_guess, random_num, turn)
     if turn == 0:
       print("You ran out of attempt, you lost!")
+      print(art.lose_logo)
       return 
     elif user_guess != random_num:
       print("Guess again.")
+      print(art.guess_again_logo)
 
 game()
 
