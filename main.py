@@ -1,5 +1,6 @@
 import art
 import random
+from replit import clear
 
 EASY_LEVEL = 10
 HARD_LEVEL = 5
@@ -57,6 +58,9 @@ def game():
       print(art.guess_again_logo)
 
 game()
+while input("Do you want to play again? Type 'y' or 'n': ") == 'y':
+  clear()
+  game()
 
 
 
