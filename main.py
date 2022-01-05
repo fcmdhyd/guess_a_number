@@ -36,7 +36,7 @@ def game():
   random_num = random.randint(0,100)
 
   #random number revealed for debugging
-  print(f"Pssst, the correct answer is {random_num}.\n")
+  # print(f"Pssst, the correct answer is {random_num}.\n")
 
   #choose difficulty
   turn = game_mode()
